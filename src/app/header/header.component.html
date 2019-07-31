@@ -1,0 +1,12 @@
+  <div>
+  <form [formGroup]="formdata" (ngSubmit) = "add(formdata.value)">
+  <div><label><b>Name : </b></label>
+  <input type="text" name="name" formControlName="name">
+  </div>
+  <div>
+  <label><b>Address : </b></label>
+  <input type="text" name="addr" formControlName="addr">
+  </div>
+  <button class="btn btn-success">Add</button>
+  </form>
+  </div>

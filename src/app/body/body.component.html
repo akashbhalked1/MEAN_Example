@@ -1,0 +1,14 @@
+<div>
+<table class="table table-striped ">
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th></th>
+</tr>
+<tr *ngFor="let person of people; let rowindex=index">
+<td (click)="enable(rowindex)" ><input type="text" (blur)="update(person)"  [(ngModel)]="person.name" [attr.disabled]="IsTextBoxDisabled[rowindex]?'true':null"></td>
+<td (click)="enable(rowindex)" ><input type="text" (blur)="update(person)" [(ngModel)]="person.addr" [attr.disabled]="IsTextBoxDisabled[rowindex]?'true':null"></td>
+<td><button (click)='delete(person._id)' class="btn btn-danger">X</button></td>
+</tr>
+</table>
+</div>
