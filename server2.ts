@@ -2,7 +2,7 @@ const express = require('express');
 const app=express();
 const port=3005;
 const mongoose=require('mongoose');
-bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 const personModel=require('./person-model');
 
 mongoose.connect('mongodb://localhost/test',{useNewUrlParser:'true'});
